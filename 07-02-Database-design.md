@@ -61,6 +61,8 @@ user {
     # 基本要求
     username 	char20 		primay key,
     password 	hash256 	not null,
+    score		int, 		# 评分
+    money 		int, 		# 机构
     
     # 基本信息，实名制的要求
     true_name	char,		# 具体设置还要再考虑
@@ -118,10 +120,12 @@ task {
 	publisher	string,		foreign key,
 							# 存发布者的用户名，外键
 	state		string		# 任务状态，完成，进行……（任务发布者决定任务完成情况）
+	score		int, 		# 接任务评分要求
 	
 	type		int,		# 调查？取快递？按编号表来排
 	# 问卷调查 --- 0
-	time		time,		# 时间……？ 问卷开始时间
+	endtime		time,		# 结束时间
+	starttime	time, 		# 问卷开始时间
 	# 取快递   --- 1
 	content		string,		# 任务描述（快递密码，具体位置，联系方式）
 }
