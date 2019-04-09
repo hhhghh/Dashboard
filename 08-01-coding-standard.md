@@ -1,6 +1,6 @@
 # JS规范
 ## 使用ES2016+
-JavaScript规范使用[ES2016+][1]  
+JavaScript规范使用ES2016+  
 
 ## 使用ESLint
 代码使用 ESlint 作为基本的语法检验工具，规则如下：
@@ -12,7 +12,7 @@ JavaScript规范使用[ES2016+][1]
 * 箭头函数参数列表按需添加括号
 * 不适用console
 * 允许非驼峰式命名
-* 基于 JavaScript Standard Style][10]`  
+* 基于 JavaScript Standard Style  
 
 额外规则：
 
