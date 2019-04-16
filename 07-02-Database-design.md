@@ -62,7 +62,7 @@ user {
     username 	char20 		primay key,
     password 	hash256 	not null,
     score		int, 		# 评分
-    money 		int, 		# 机构
+    money 		float, 		# 机构
     
     # 基本信息，实名制的要求
     true_name	char,		# 具体设置还要再考虑
@@ -170,5 +170,25 @@ pit { # 决定机构可以向那些小组发送任务 Permission institution to 
 piu { # 决定机构不可以向用户发送任务 Permission institution to user
 	ins_name	string 		foreign key,
 	username	string 		foreign key,
+}
+```
+
+### 小组任务之间关系
+
+```mysql
+teamtask { # 小组包含的任务
+	task_id		int  		foreign key,
+	team_id		int			foreign key,
+	isolate 	bool		# 是否屏蔽
+}
+```
+
+
+### 小组标签
+
+```mysql
+teamlabel { # 小组标签 Labels for teams
+	team_id		int			foreign key,
+	label		string 		
 }
 ```
