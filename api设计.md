@@ -2,7 +2,7 @@
 
 # 搜索任务界面
 
-**注意，所有URL都是以我们的域名`/api`开始的，比如域名为`hhhghh.com`，那么就是`hhhghh.com/api/task?...` **，`hhhghh.com/task/`之类的这种域名留给
+**注意，所有URL都是以我们的域名`/api`开始的，比如域名为`hhhghh.com`，那么就是`hhhghh.com/api/task?...` ，`hhhghh.com/task/`之类的这种域名留给前端的正常页面展示**
 
 1. getGroup(user.id)
   根据user.id查找用户所有加入的小组group信息
