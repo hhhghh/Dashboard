@@ -92,7 +92,7 @@ team {
 	# 基本要求
 	team_id		int			primary key,
 	team_name	string		not null,
-	
+	leader		string 		not null, # 组长
 	# to-do
 	# 实名制信息
 	# school		...
@@ -102,7 +102,7 @@ team {
 	# 可选内容
 	logo		image-url	default '0.0.0.0:8000/images/default.png',
 	description	string,		# 小组描述
-	tag			stirng,		# 小组标签，可选多个？是否需要联系表来描述
+	limit       int   		# 小组权限 直接进组-0/需要组长审核-1/禁止加入-2
 }
 ```
 
