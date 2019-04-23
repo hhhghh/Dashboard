@@ -5,3 +5,8 @@
 ### 用例：退出小组
 领域模型：  
 ![退出小组类图](image/class_withdrawGroup.png)  
+
+
+### 任务
+
+![](image/domain_model_for_Task.PNG)
