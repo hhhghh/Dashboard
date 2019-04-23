@@ -8,5 +8,4 @@
 
 
 ### 任务
-
 ![](image/domain_model_for_Task.PNG)
