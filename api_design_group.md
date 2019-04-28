@@ -5,15 +5,24 @@ http://localhost:3000/api/team/
 1. ```getGroupByGroupName(group.name)```: 根据组名来查找小组 
     GET: /team/?team_name={:team_name}
     200 成功，412 异常， 413 没有小组
-
+    返回格式
+      ![搜索1-1](/image\team返回格式\搜索1-1.png)
+      ![搜索1-2](/image\team返回格式\搜索1-2.png)
 
 2. ```getGroupByGroupId(group.id)```: 根据小组id来查找小组 
      GET: /team/?team_id={:team_id}
      200 成功，412 异常，413 没有小组
+     返回格式
+      ![搜索2-1](/image\team返回格式\搜索2-1.png)
+      ![搜索2-2](/image\team返回格式\搜索2-2.png)
 
 3. ```getGroupByTag(tag)```: 根据标签来查找小组
      GET: /team/?tag={:tag}
      200 成功，412 异常
+     返回格式
+      ![搜索3-1](/image\team返回格式\搜索3-1.png)
+      ![搜索3-2](/image\team返回格式\搜索3-2.png)
+      ![搜索3-3](/image\team返回格式\搜索3-3.png)
 
 4. ```applyToJoinGroup(user.id, group.id)```: 用户申请进组，判断小组的进组权限，直接进组/需要组长审核/禁止加入
      PATCH: /teamMembers/?team_id={:team_id}&username={:username}
