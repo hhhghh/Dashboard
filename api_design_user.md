@@ -62,8 +62,8 @@
         ```json
         {
             "code": 500,
-            "msg": 'failed',
-            "data": err
+            "msg": "failed",
+            "data": {}
         }
         ```
 
@@ -109,8 +109,8 @@
         ```json
         {
             "code": 500,
-            "msg": 'failed',
-            "data": err
+            "msg": "failed",
+            "data": {}
         }
         ```
 
@@ -164,8 +164,8 @@
         ```json
         {
             "code": 500,
-            "msg": 'failed',
-            "data": err
+            "msg": "failed",
+            "data": {}
         }
         ```
 
@@ -192,8 +192,8 @@
         ```json
         {
             "code": 500,
-            "msg": 'failed',
-            "data": err
+            "msg": "failed",
+            "data": {}
         }
         ```
 
@@ -241,8 +241,8 @@
         ```json
         {
             "code": 500,
-            "msg": 'failed',
-            "data": err
+            "msg": "failed",
+            "data": {}
         }
         ```
 
@@ -303,8 +303,8 @@
         ```json
         {
             "code": 500,
-            "msg": 'failed',
-            "data": err
+            "msg": "failed",
+            "data": {}
         }
         ```
 ## 充值
@@ -345,8 +345,8 @@
         ```json
         {
             "code": 500,
-            "msg": 'failed',
-            "data": err
+            "msg": "failed",
+            "data": {}
         }
         ```
 
@@ -386,8 +386,8 @@
         ```json
         {
             "code": 500,
-            "msg": 'failed',
-            "data": err
+            "msg": "failed",
+            "data": {}
         }
         ```
 ## 提现
