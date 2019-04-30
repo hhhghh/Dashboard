@@ -28,9 +28,9 @@ http://localhost:3000/api/team/
 
 3. ```getGroupByTag(tag)```: 根据标签来查找小组
 
-     GET: /team/?tag={:tag}
+     GET: /team/?label={:label}
      
-     200 成功，412 异常
+     200 成功，412 异常，413 没有小组
      
      返回格式
      
@@ -51,9 +51,9 @@ http://localhost:3000/api/team/
 
     GET: /team/?member_username={:member_username}
     
-    200 成功，412 异常
+    200 成功，412 异常，413 没有加入小组
     
-2. ```getMembersByGroupId(group.id)```: 根据小组id来得到小组成员 
+2. ```getMembersByGroupId(group.id)```: 根据小组id来得到小组成员  感觉不需要了，直接通过id获取小组信息中就有了
 
     GET: /team/?group_id={:group_id}
     
@@ -107,7 +107,7 @@ http://localhost:3000/api/team/
 
 	PUT: /modifyTeam/
 
-	200 成功，412 异常，413 组长不存在/小组不存在，414 组长不正确
+	200 成功，412 异常，413 组长不存在/小组不存在，414 组长不正确，416 参数不齐全
 
 	上传格式
 

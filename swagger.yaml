@@ -1,0 +1,656 @@
+swagger: "2.0"
+info:
+  description: "This is a sample test.  You can find out more at [https://github.com/hhhghh/Dashboard](https://github.com/hhhghh/Dashboard)     For this sample, you can use the api key `special-key` to test the authorization filters."
+  version: "1.0.0"
+  title: "Happy spare money"
+  termsOfService: "http://swagger.io/terms/"
+  contact:
+    email: "apiteam@swagger.io"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "localhost:3000"
+
+tags:
+- name: "Team"
+  description: "Everything about your Teams"
+  externalDocs:
+    description: "Find out more "
+    url: "https://github.com/hhhghh/Dashboard/blob/master/api_design_group.md"
+- name: "User"
+  description: "Operations about user"
+  externalDocs:
+    description: "Find out more "
+    url: "https://github.com/hhhghh/Dashboard/blob/master/api_design_user.md"
+- name: "Task"
+  description: "Operations about task"
+  externalDocs:
+    description: "Find out more "
+    url: "https://github.com/hhhghh/Dashboard/blob/master/api%E8%AE%BE%E8%AE%A1.md"   
+    
+schemes:
+- "https"
+- "http"
+paths:
+  /api/v1/team/Id:
+    get:
+      tags:
+      - "Team"
+      summary: "Find team by Id"
+      description: "Returns a single team"
+      operationId: "getTeamById"
+      produces:
+      - "application/json"
+      - "application/xml"
+      parameters:
+      - name: "team_id"
+        in: "query"
+        description: "ID of team to return"
+        required: true
+        type: "integer"
+        format: "int32"
+      responses:
+        200:
+          description: "Successful operation"
+          schema:
+            $ref: "#/definitions/Team"
+        412:
+          description: "Abnormal"
+        413:
+          description: "Team not found"
+      
+  /api/v1/team/Leader:
+    get:
+      tags:
+      - "Team"
+      summary: "Judge whether it is team Leader"
+      description: "Returns true or false"
+      operationId: "isTeamLeader"
+      produces:
+      - "application/json"
+      - "application/xml"
+      parameters:
+      - name: "team_id"
+        in: "query"
+        description: "ID of team"
+        required: true
+        type: "integer"
+        format: "int32"
+      - name: "leader"
+        in: "query"
+        description: "leader of team"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "Is team leader"
+        412:
+          description: "Abnormal"
+        413:
+          description: "Is not team leader"
+    
+    post:
+      tags:
+      - "Team"
+      summary: "Change leader"
+      description: "Returns true or false"
+      operationId: "updateTeamLeader"
+      produces:
+      - "application/json"
+      - "application/xml"
+      parameters:
+      - name: "body"
+        in: "body"
+        description: "Create team object"
+        required: true
+        schema:
+          $ref: "#/definitions/Invitation"
+
+      responses:
+        200:
+          description: "Successful operation"
+        412:
+          description: "Abnormal"
+        413:
+          description: "Team leader is wrong"
+        414:
+          description: "Team member is wrong"
+          
+  /api/v1/team/Member:
+    get:
+      tags:
+      - "Team"
+      summary: "Judge whether it is team Member"
+      description: "Returns true or false"
+      operationId: "isTeamMember"
+      produces:
+      - "application/json"
+      - "application/xml"
+      parameters:
+      - name: "team_id"
+        in: "query"
+        description: "ID of team"
+        required: true
+        type: "integer"
+        format: "int32"
+      - name: "member_username"
+        in: "query"
+        description: "member of team"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "Is team member"
+        412:
+          description: "Abnormal"
+        413:
+          description: "Is not team member"
+          
+  /api/v1/team/Name:
+    get:
+      tags:
+      - "Team"
+      summary: "Find team by Name"
+      description: "Returns a team list"
+      operationId: "getTeamByTeamName"
+      produces:
+      - "application/json"
+      - "application/xml"
+      parameters:
+      - name: "team_name"
+        in: "query"
+        description: "Name of team"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "Successful operation"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Team"
+        412:
+          description: "Abnormal"
+        413:
+          description: "Team not found"
+          
+  /api/v1/team/Label:
+    get:
+      tags:
+      - "Team"
+      summary: "Find team by Label"
+      description: "Returns a team list"
+      operationId: "getTeamByTeamLabel"
+      produces:
+      - "application/json"
+      - "application/xml"
+      parameters:
+      - name: "label"
+        in: "query"
+        description: "Label of team"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "Successful operation"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Team"
+        412:
+          description: "Abnormal"
+        413:
+          description: "Team not found"
+          
+  /api/v1/team/MemberName:
+    get:
+      tags:
+      - "Team"
+      summary: "Find team by MemberName"
+      description: "Returns a team list"
+      operationId: "getTeamByMemberName"
+      produces:
+      - "application/json"
+      - "application/xml"
+      parameters:
+      - name: "member_username"
+        in: "query"
+        description: "MemberName of team"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "Successful operation"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Team"
+        412:
+          description: "Abnormal"
+        413:
+          description: "Not joining the team" 
+          
+  /api/v1/team:
+    post:
+      tags:
+      - "Team"
+      summary: "Create team"
+      description: "Returns a simgle team"
+      operationId: "CreateTeam"
+      produces:
+      - "application/json"
+      - "application/xml"
+      parameters:
+      - name: "body"
+        in: "body"
+        description: "Create team object"
+        required: true
+        schema:
+          $ref: "#/definitions/TeamModel"
+      responses:
+        200:
+          description: "Successful operation"
+          schema:
+            $ref: "#/definitions/Team"
+        412:
+          description: "Abnormal"
+        413:
+          description: "Team leader does not exist"
+        414:
+          description: "Some Team members does not exist"
+        416:
+          description: "Parameter incomplete"
+   
+    put:
+      tags:
+      - "Team"
+      summary: "Modify team"
+      description: "Returns a simgle team"
+      operationId: "ModifyTeam"
+      produces:
+      - "application/json"
+      - "application/xml"
+      parameters:
+      - name: "body"
+        in: "body"
+        description: "Create team object"
+        required: true
+        schema:
+          $ref: "#/definitions/TeamModel2"
+      responses:
+        200:
+          description: "Successful operation"
+          schema:
+            $ref: "#/definitions/Team"
+        412:
+          description: "Abnormal"
+        413:
+          description: "Team leader or team does not exist"
+        414:
+          description: "Team leader does not correct"
+        416:
+          description: "Parameter incomplete"
+    
+    delete:
+      tags:
+      - "Team"
+      summary: "Delete team"
+      description: "Returns true or false"
+      operationId: "deleteTeam"
+      produces:
+      - "application/json"
+      - "application/xml"
+      parameters:
+      - name: "team_id"
+        in: "query"
+        description: "Id of team"
+        required: true
+        type: "integer"
+        format: "int32"
+      - name: "leader"
+        in: "query"
+        description: "Member of team"
+        required: true
+        type: "string"
+
+      responses:
+        200:
+          description: "Successful operation"
+        412:
+          description: "Abnormal"
+        413:
+          description: "Team leader is wrong"
+          
+  /api/v1/team/Member/Invitation:  
+    post:
+      tags:
+      - "Team"
+      summary: "Invitation user"
+      description: "Returns true or false"
+      operationId: "addUserToTeam"
+      produces:
+      - "application/json"
+      - "application/xml"
+      parameters:
+      - name: "body"
+        in: "body"
+        description: "Create team object"
+        required: true
+        schema:
+          $ref: "#/definitions/Invitation"
+
+      responses:
+        200:
+          description: "Successful operation"
+        412:
+          description: "Abnormal"
+        413:
+          description: "Team leader verification is required"
+        414:
+          description: "Not allowed to add"
+    
+  /api/v1/team/Member/Addition:  
+    post:
+      tags:
+      - "Team"
+      summary: "Addition user"
+      description: "Returns true or false"
+      operationId: "adduserToTeam"
+      produces:
+      - "application/json"
+      - "application/xml"
+      parameters:
+      - name: "body"
+        in: "body"
+        description: "Create team object"
+        required: true
+        schema:
+          $ref: "#/definitions/Addition"
+
+      responses:
+        200:
+          description: "Successful operation"
+        412:
+          description: "Abnormal"
+        413:
+          description: "Team leader verification is required"
+        414:
+          description: "Not allowed to add"    
+  
+  /api/v1/team/Member/Dislodge:  
+    delete:
+      tags:
+      - "Team"
+      summary: "Delete user"
+      description: "Returns true or false"
+      operationId: "deleteUserFromTeam"
+      produces:
+      - "application/json"
+      - "application/xml"
+      parameters:
+      - name: "team_id"
+        in: "query"
+        description: "Id of team"
+        required: true
+        type: "integer"
+        format: "int32"
+      - name: "leader"
+        in: "query"
+        description: "Leader of team"
+        required: true
+        type: "string"
+      - name: "username"
+        in: "query"
+        description: "Member of team"
+        required: true
+        type: "string"
+
+      responses:
+        200:
+          description: "Successful operation"
+        412:
+          description: "Abnormal"
+        413:
+          description: "Team leader is wrong"
+        414:
+          description: "Team leader cannot be deleted"    
+        415:
+          description: "The team does not have that user"
+  
+  /api/v1/team/Member/Departure:  
+    delete:
+      tags:
+      - "Team"
+      summary: "User Leave the team"
+      description: "Returns true or false"
+      operationId: "deleteuserFromTeam"
+      produces:
+      - "application/json"
+      - "application/xml"
+      parameters:
+      - name: "team_id"
+        in: "query"
+        description: "Id of team"
+        required: true
+        type: "integer"
+        format: "int32"
+      - name: "username"
+        in: "query"
+        description: "Member of team"
+        required: true
+        type: "string"
+
+      responses:
+        200:
+          description: "Successful operation"
+        412:
+          description: "Abnormal"
+        413:
+          description: "Team member is wrong"
+        414:
+          description: "Team leader cannot leave the team"    
+        415:
+          description: "There is no team"
+    
+# securityDefinitions:
+#   petstore_auth:
+#     type: "oauth2"
+#     authorizationUrl: "http://petstore.swagger.io/oauth/dialog"
+#     flow: "implicit"
+#     scopes:
+#       write:pets: "modify pets in your account"
+#       read:pets: "read your pets"
+#   api_key:
+#     type: "apiKey"
+#     name: "api_key"
+#     in: "header"   
+   
+      
+definitions:     
+  Teamlabels:
+    type: "object"
+    required:
+    - "team_id"
+    - "label"
+    properties:
+      id:
+        type: "integer"
+        format: "int32"
+      team_id:
+        type: "integer"
+        format: "int32"
+      label:
+        type: "string"
+    xml:
+      name: "Teamlabels"
+      
+  Members:
+    type: "object"
+    required:
+    - "team_id"
+    - "member_username"
+    properties:
+      id:
+        type: "integer"
+        format: "int32"
+      team_id:
+        type: "integer"
+        format: "int32"
+      member_username:
+        type: "string"
+    xml:
+      name: "Members"
+      
+  Team:
+    type: "object"
+    required:
+    - "team_name"
+    - "leader"
+    properties:
+      team_id:
+        type: "integer"
+        format: "int32"
+      team_name:
+        type: "string"
+      leader:
+        type: "string"
+      logo:
+        type: "string"
+      description:
+        type: "string"
+      limit:
+        type: "integer"
+        format: "int32"
+      teamlabels:
+        type: "array"
+        items:
+          $ref: "#/definitions/Teamlabels"
+      members:
+        type: "array"
+        items:
+          $ref: "#/definitions/Members"
+    xml:
+      name: "Team"
+      
+  TeamModel:
+    type: "object"
+    required:
+    - "team_name"
+    - "leader"
+    - "members"
+    properties:
+      team_name:
+        type: "string"
+        example: ""
+      leader:
+        type: "string"
+        example: ""
+      logo:
+        type: "string"
+        example: ""
+      description:
+        type: "string"
+        example: ""
+      limit:
+        type: "integer"
+        format: "int32"
+      teamlabels:
+        type: "array"
+        items:
+          $ref: "#/definitions/labels"
+      members:
+        type: "array"
+        items:
+          $ref: "#/definitions/members"
+    xml:
+      name: "TeamModel"
+  
+  TeamModel2:
+    type: "object"
+    required:
+    - "team_id"
+    - "leader"
+    - "members"
+    properties:
+      team_id:
+        type: "integer"
+        format: "int32"
+      team_name:
+        type: "string"
+        example: ""
+      leader:
+        type: "string"
+        example: ""
+      logo:
+        type: "string"
+        example: ""
+      description:
+        type: "string"
+        example: ""
+      limit:
+        type: "integer"
+        format: "int32"
+      teamlabels:
+        type: "array"
+        items:
+          $ref: "#/definitions/labels"
+      
+    xml:
+      name: "TeamModel2"
+      
+  labels:
+    type: "object"
+    required:
+    - "label"
+    properties:
+      label:
+        type: "string"
+        example: ""
+    xml:
+      name: "labels"
+      
+  members:
+    type: "object"
+    required:
+    - "member_username"
+    properties:
+      member_username:
+        type: "string"
+        example: ""
+    xml:
+      name: "members"
+      
+  Invitation:
+    type: "object"
+    required:
+    - "team_id"
+    - "leader"
+    - "username"
+    properties:
+      team_id:
+        type: "integer"
+        format: "int32"
+      leader:
+        type: "string"
+        example: ""
+      username:
+        type: "string"
+        example: ""
+    xml:
+      name: "Invitation"
+      
+  Addition:
+    type: "object"
+    required:
+    - "team_id"
+    - "username"
+    properties:
+      team_id:
+        type: "integer"
+        format: "int32"
+      username:
+        type: "string"
+        example: ""
+    xml:
+      name: "Addition"
+    
