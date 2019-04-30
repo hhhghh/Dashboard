@@ -11,7 +11,7 @@ http://localhost:3000/api/team/
     返回格式
     
       ![搜索1-1](/image/team返回格式/搜索1-1.png)
-      
+    
       ![搜索1-2](/image/team返回格式/搜索1-2.png)
 
 2. ```getGroupByGroupId(group.id)```: 根据小组id来查找小组 
@@ -23,7 +23,7 @@ http://localhost:3000/api/team/
      返回格式
      
       ![搜索2-1](/image/team返回格式/搜索2-1.png)
-      
+     
       ![搜索2-2](/image/team返回格式/搜索2-2.png)
 
 3. ```getGroupByTag(tag)```: 根据标签来查找小组
@@ -35,9 +35,9 @@ http://localhost:3000/api/team/
      返回格式
      
       ![搜索3-1](/image/team返回格式/搜索3-1.png)
-      
+     
       ![搜索3-2](/image/team返回格式/搜索3-2.png)
-      
+     
       ![搜索3-3](/image/team返回格式/搜索3-3.png)
 
 4. ```applyToJoinGroup(user.id, group.id)```: 用户申请进组，判断小组的进组权限，直接进组/需要组长审核/禁止加入
@@ -75,10 +75,10 @@ http://localhost:3000/api/team/
 
    DELETE: /team/?team_id={:team_id}&leader={:leader}
    
-    200 成功，412 异常，413 组长不正确
-    
-    还缺少删除小组相关任务部分
-    
+   200 成功，412 异常，413 组长不正确
+   
+   还缺少删除小组相关任务部分
+   
 5. ```removeMemberFromGroup(group.id, group_leader.username, member.username)```: 判断group_leader是否是这个小组的组长以及判断被踢成员是否在组里，若在，则踢出小组，返回踢出成功 
 
     DELETE: /team/?team_id={:team_id}&leader={:leader}&username={:username}
@@ -105,24 +105,24 @@ http://localhost:3000/api/team/
     
 9. ```modifyGroupInformation(group, group_leader.id)```: 判断是否是组长，若是则修改小组信息
 
-PUT: /modifyTeam/
+	PUT: /modifyTeam/
 
-200 成功，412 异常，413 组长不存在/小组不存在，414 组长不正确
+	200 成功，412 异常，413 组长不存在/小组不存在，414 组长不正确
 
-上传格式
+	上传格式
 
-![modifyTeam](./image/modifyTeam.jpg)
+	![modifyTeam](/image/team返回格式/modifyTeam.png)
 
 # 创建小组页面
 1. ```createGroup(group, creator.id, vector<user.username>)```: 创建小组，creator为组长，vector中的user为小组成员（如果isUserExisted没有实现，这里需要逐个判断用户是否存在）
 
-上传格式
+    上传格式
+    
+    ![createTeam](/image/team返回格式/createTeam.png)
 
-![createTeam](./image/createTeam.jpg)
+    POST: /createTeam/ 
 
-POST: /createTeam/ 
-
-200 成功，412 异常, 413 组长不存在，414 部分成员不存在，416 参数不齐全
+    200 成功，412 异常, 413 组长不存在，414 部分成员不存在，416 参数不齐全
 
 
 # 未完待续......
