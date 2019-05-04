@@ -1,71 +1,73 @@
 ## 用户注册
 
-``register(type, info)``：
+``register(infoForm)``：
 
-- type参数为注册类型，0表示普通用户，1表示机构；
-- info为注册时填写的个人信息，是一个对象，可以通过key取得各信息，如logo,school,grade,username等。
++ 将用户在表单中填写的个人信息提交至服务器进行注册
 
 + POST: `/api/user/create`
-    + 上传数据格式：
-    ```json
-    {
-	"type":0,
-	"info": {
-		"username": "hzh",
-		"password": "123",
-		"true_name": "hzh",
-		"school_name": "SYSU",
-		"grade": 3,
-		"avatar": null,
-		"nickname": "hzh",
-		"wechat": null,
-		"QQ": null,
-		"phone_number": null
-	    }
+  
+    +  Content-Type: multipart/form-data
+    + 表单数据包含个人信息的文本数据，以及头像，认证照片的图像文件
+	+ 提交的表单数据在服务端经过formidable模块解析后的格式为：
+	
+	```json
+	{
+	    fields: {
+	    	"type": "0",
+	        "username": "hzh",
+	        "password": "123",
+	        "name": "hzh",
+	        "school": "SYSU",
+	        "grade": "3",
+	        "phone": "",
+	        "weChat": "",
+            "qq": ""
+    	},
+      	files: { 
+            authImg: {
+                size: 12345,
+                path: '',
+                name: '',
+                type: 'image/jpeg'
+    		},
+            avatar: {
+                size: 12345,
+                path: '',
+                name: '',
+                type: 'image/jpeg'
+    		},
+    	} 
     }
     ```
-    + 返回信息
-        + 200 创建成功,并返回创建成功的用户信息
-        ```json
-        {
-            "code": 200,
-            "msg": "success",
-            "data": {
-                    "createdAt": "2019-04-29 14:13:49",
-                    "updatedAt": "2019-04-29 14:13:49",
-                    "score": 50,
-                    "money": 0,
-                    "username": "test6",
-                    "password": "123",
-                    "true_name": "hzh",
-                    "school_name": "SYSU",
-                    "grade": 4,
-                    "avatar": null,
-                    "nickname": "hzh",
-                    "wechat": null,
-                    "QQ": null,
-                    "phone_number": null,
-                    "account_state": 0
-            }
+    注：若未上传头像或认证照片，则``files``中无``avatar``或``authImg``键值对。
++ 返回信息
+	+ 200 创建成功,并返回创建成功的用户信息
+    ```json
+    {
+    	"code": 200,
+    	"msg": "success",
+        "data": {
+        	"username": ""
         }
-        ```
-
-        + 409 用户名已存在
-        ```json
-        {
-            "code": 409,
-            "msg": "该用户已存在",
-            "data": null
-        }
-        ```
-        + 500 服务器异常
-        ```json
-        {
-            "code": 500,
-            "msg": "failed",
-            "data": {}
-        }
-        ```
+    }
+    ```
+	+ 409 用户名已存在
+    ```json
+    {
+        "code": 409,
+        "msg": "该用户已存在",
+        "data": null
+    }
+    ```
+	+ 500 服务器异常
+    
+    ```json
+    {
+        "code": 500,
+        "msg": "failed",
+        "data": {}
+    }
+    ```
 
 ## 用户登录
 
@@ -253,8 +255,8 @@
     + 提交数据格式
     ```json
     {
- 	    "username": "hyx",
- 	    "password":"123",
+	 	    "username": "hyx",
+	 	    "password":"123",
         "score": 0,
         "money": 1632,
         "true_name": "韩",
@@ -314,7 +316,7 @@
     + 提交数据格式
     ```json
     {
- 	    "username": "hyx",
+	 	    "username": "hyx",
         "money": 1632
     }
     ```
@@ -355,7 +357,7 @@
     + 提交数据格式
     ```json
     {
- 	    "username": "hyx",
+	 	    "username": "hyx",
         "score": 10
     }
     ```
@@ -393,4 +395,5 @@
 ## 提现
 
 ``withdraw()``
+
 + 第一次迭代暂无此功能
