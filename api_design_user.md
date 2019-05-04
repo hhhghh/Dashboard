@@ -8,78 +8,82 @@
   
     +  Content-Type: multipart/form-data
     + 表单数据包含个人信息的文本数据，以及头像，认证照片的图像文件
-	+ 提交的表单数据在服务端经过formidable模块解析后的格式为：
-	
-	```json
-	{
-	    fields: {
-	    	"type": "0",
-	        "username": "hzh",
-	        "password": "123",
-	        "name": "hzh",
-	        "school": "SYSU",
-	        "grade": "3",
-	        "phone": "",
-	        "weChat": "",
-            "qq": ""
-    	},
-      	files: { 
-            authImg: {
-                size: 12345,
-                path: '',
-                name: '',
-                type: 'image/jpeg'
-    		},
-            avatar: {
-                size: 12345,
-                path: '',
-                name: '',
-                type: 'image/jpeg'
-    		},
-    	} 
-    }
-    ```
-    注：若未上传头像或认证照片，则``files``中无``avatar``或``authImg``键值对。
-+ 返回信息
-	+ 200 创建成功,并返回创建成功的用户信息
-    ```json
-    {
-    	"code": 200,
-    	"msg": "success",
-        "data": {
-        	"username": ""
-        }
-    }
-    ```
-	+ 409 用户名已存在
-    ```json
-    {
-        "code": 409,
-        "msg": "该用户已存在",
-        "data": null
-    }
-    ```
-	+ 500 服务器异常
+    + 提交的表单数据在服务端经过formidable模块解析后的格式为：
     
     ```json
     {
-        "code": 500,
-        "msg": "failed",
-        "data": {}
+        "fields": {
+            "type": "0",
+            "username": "hzh",
+            "password": "123",
+            "name": "hzh",
+            "school": "SYSU",
+            "grade": "3",
+            "phone": "",
+            "weChat": "",
+            "qq": ""
+        },
+        "files": { 
+            "authImg": {
+                "size": 12345,
+                "path": "",
+                "name": "",
+                "type": 'image/jpeg'
+            },
+            "avatar": {
+                "size": 12345,
+                "path": "",
+                "name": "",
+                "type": 'image/jpeg'
+            },
+        } 
     }
     ```
+    注：若未上传头像或认证照片，则``files``中无``avatar``或``authImg``键值对。
+    + 返回信息
+
+        + 200 创建成功,并返回创建成功的用户信息
+        ```json
+        {
+            "code": 200,
+            "msg": "success",
+            "data": {
+                "username": ""
+            }
+        }
+        ```
+        + 409 用户名已存在
+        ```json
+        {
+            "code": 409,
+            "msg": "该用户已存在",
+            "data": null
+        }
+        ```
+        + 500 服务器异常
+
+        ```json
+        {
+            "code": 500,
+            "msg": "failed",
+            "data": null
+        }
+        ```
 
 ## 用户登录
 
 ``login(type, username, password)``: 根据登录类型，用户名， 密码进行登录，服务器给创建一个session并把session-id作为cookie发送给客户端。
 
 + POST: `/api/user/login`
+  
+    + Content-Type:  application/json
     + 上传数据格式
+    
     ```json
     {
         "type":0,
-	    "username":"hzh",
-	    "password":"123"
+        "username":"hzh",
+        "password":"123"
     }
     ```
     + 返回信息
@@ -96,7 +100,7 @@
         {
            "code": 412,
             "msg": "用户名或密码错误",
-            "data": "error"
+            "data": null
         }
         ```
         + 413 账户类型错误
@@ -104,7 +108,7 @@
         {
            "code": 413,
             "msg": "账户类型错误",
-            "data": "error"
+            "data": null
         }
         ```
         + 500 服务器异常
@@ -112,7 +116,7 @@
         {
             "code": 500,
             "msg": "failed",
-            "data": {}
+            "data": null
         }
         ```
 
@@ -123,26 +127,23 @@
 ## 获取用户信息
 
 ``getUserInfo(username)``: 通过用户名获取用户信息。
+
 + GET: `/api/user/getuser?username={username}`
+  
     + 返回信息
-        + 200 查询成功并返回用户除密码外的其他信息
+        + 200 查询成功并返回用户基本信息
         ```json
         {
             "code": 200,
             "msg": "success",
             "data": {
                 "username": "hzh",
-                "score": 100,
-                "money": 100,
-                "true_name": "hzh",
-                "school_name": "SYSU",
-                "grade": 4,
-                "avatar": null,
-                "nickname": "hzh",
-                "wechat": null,
-                "QQ": null,
-                "phone_number": null,
-                "account_state": 0
+                "name": "hzh",
+                "school": "SYSU",
+                "grade": "3",
+                "phone": "",
+                "weChat": "",
+                "qq": ""
             }
         }
         ```
@@ -159,34 +160,6 @@
         {
             "code": 412,
             "msg": "用户不存在",
-            "data": {}
-        }
-        ```
-        + 500 服务器异常
-        ```json
-        {
-            "code": 500,
-            "msg": "failed",
-            "data": {}
-        }
-        ```
-
-## 获取用户头像
-+ GET: `/api/user/getavatar?username={username}`
-    + 返回信息
-        + 200 查询成功并返回头像url
-        ```json
-        {
-           "code": 200,
-            "msg": "success",
-            "data": "default url waiting be set"
-        }
-        ```
-        + 400 参数错误
-        ```json
-        {
-            "code": 400,
-            "msg": "Wrong query param.",
             "data": null
         }
         ```
@@ -195,11 +168,88 @@
         {
             "code": 500,
             "msg": "failed",
-            "data": {}
+            "data": null
         }
         ```
 
+## 获取用户头像
+
++ 用户头像作为静态资源
+
++ GET: `/:path/avatar_{username}`
+  
+
+## 获取用户接受的已完成的任务
++ GET: `/api/user/getAcceptedFinishedTasks?username={username}`
+    + 返回用户接受的已完成的任务列表
+    ```json
+    [
+        {
+            "title": "问卷调查",
+            "introduction": "",
+            "starttime": "2019-05-01 00:00:00",
+            "endtime": "2019-05-02 00:00:00",
+            "score": 3.5
+        },
+        {
+            "title": "取快递",
+            "introduction": "",
+            "starttime": "2019-05-02 00:00:00",
+            "endtime": "2019-05-03 00:00:00",
+            "score": 4.0
+        }
+        
+    ]
+    ```
+## 获取用户发布的已完成的任务
++ GET: `/api/user/getPublishedFinishedTasks?username={username}`
+    + 返回用户发布的已完成的任务列表
+    ```json
+    [
+        {
+            "title": "问卷调查",
+            "introduction": "",
+            "starttime": "2019-05-01 00:00:00",
+            "endtime": "2019-05-02 00:00:00",
+            "score": 3.5
+        },
+        {
+            "title": "取快递",
+            "introduction": "",
+            "starttime": "2019-05-02 00:00:00",
+            "endtime": "2019-05-03 00:00:00",
+            "score": 4.0
+        }
+        
+    ]
+    ```
+## 获取用户发布的等待接受的任务
++ GET: `/api/user/getPublishedWaitedTasks?username={username}`
+    + 返回用户发布的已完成的任务列表
+    ```json
+    [
+        {   
+            "taskId": 1,
+            "title": "问卷调查",
+            "introduction": "",
+            "starttime": "2019-05-01 00:00:00",
+            "endtime": "2019-05-02 00:00:00",
+            "score": 3.5
+        },
+        {   
+            "taskId": 2,
+            "title": "取快递",
+            "introduction": "",
+            "starttime": "2019-05-02 00:00:00",
+            "endtime": "2019-05-03 00:00:00",
+            "score": 4.0
+        }
+        
+    ]
+    ```
+
 ## 获取组织信息
+
 + GET: `/api/user/getorg?username={username}`
     + 返回信息
         + 200 查询成功并返回用户除密码外的其他信息
@@ -255,8 +305,8 @@
     + 提交数据格式
     ```json
     {
-	 	    "username": "hyx",
-	 	    "password":"123",
+        "username": "hyx",
+        "password":"123",
         "score": 0,
         "money": 1632,
         "true_name": "韩",
@@ -316,7 +366,7 @@
     + 提交数据格式
     ```json
     {
-	 	    "username": "hyx",
+            "username": "hyx",
         "money": 1632
     }
     ```
@@ -357,7 +407,7 @@
     + 提交数据格式
     ```json
     {
-	 	    "username": "hyx",
+            "username": "hyx",
         "score": 10
     }
     ```
