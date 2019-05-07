@@ -28,13 +28,13 @@
                 "size": 12345,
                 "path": "",
                 "name": "",
-                "type": 'image/jpeg'
+                "type": "image/jpeg"
             },
             "avatar": {
                 "size": 12345,
                 "path": "",
                 "name": "",
-                "type": 'image/jpeg'
+                "type": "image/jpeg"
             },
         } 
     }
