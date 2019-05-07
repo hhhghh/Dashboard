@@ -189,14 +189,16 @@
             "introduction": "",
             "starttime": "2019-05-01 00:00:00",
             "endtime": "2019-05-02 00:00:00",
-            "score": 3.5
+            "score": 3.5,
+            "money": 0.1
         },
         {
             "title": "取快递",
             "introduction": "",
             "starttime": "2019-05-02 00:00:00",
             "endtime": "2019-05-03 00:00:00",
-            "score": 4.0
+            "score": 4.0,
+            "money": 12.0
         }
         
     ]
@@ -211,14 +213,16 @@
             "introduction": "",
             "starttime": "2019-05-01 00:00:00",
             "endtime": "2019-05-02 00:00:00",
-            "score": 3.5
+            "score": 3.5,
+            "money": 0.5
         },
         {
             "title": "取快递",
             "introduction": "",
             "starttime": "2019-05-02 00:00:00",
             "endtime": "2019-05-03 00:00:00",
-            "score": 4.0
+            "score": 4.0,
+            "money": 10.0
         }
         
     ]
@@ -234,7 +238,8 @@
             "introduction": "",
             "starttime": "2019-05-01 00:00:00",
             "endtime": "2019-05-02 00:00:00",
-            "score": 3.5
+            "score": 3.5,
+            "money": 0.1
         },
         {   
             "taskId": 2,
@@ -242,7 +247,8 @@
             "introduction": "",
             "starttime": "2019-05-02 00:00:00",
             "endtime": "2019-05-03 00:00:00",
-            "score": 4.0
+            "score": 4.0,
+            "money": 12.0
         }
         
     ]
