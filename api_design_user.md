@@ -183,77 +183,128 @@
 + GET: `/api/user/getAcceptedFinishedTasks?username={username}`
     + 返回用户接受的已完成的任务列表
     ```json
-    [
-        {
-            "title": "问卷调查",
-            "introduction": "",
-            "starttime": "2019-05-01 00:00:00",
-            "endtime": "2019-05-02 00:00:00",
-            "score": 3.5,
-            "money": 0.1
-        },
-        {
-            "title": "取快递",
-            "introduction": "",
-            "starttime": "2019-05-02 00:00:00",
-            "endtime": "2019-05-03 00:00:00",
-            "score": 4.0,
-            "money": 12.0
-        }
-        
-    ]
+    {
+        "code": 200,
+        "msg": "success",
+        "data": [
+            {   
+                "taskId": 1,
+                "title": "问卷调查",
+                "introduction": "",
+                "starttime": "2019-05-01 00:00:00",
+                "endtime": "2019-05-02 00:00:00",
+                "score": 3.5,
+                "money": 0.1
+            },
+            {   
+                "taskId": 2,
+                "title": "取快递",
+                "introduction": "",
+                "starttime": "2019-05-02 00:00:00",
+                "endtime": "2019-05-03 00:00:00",
+                "score": 4.0,
+                "money": 12.0
+            }
+        ]  
+    }
     ```
 ## 获取用户发布的已完成的任务
 + GET: `/api/user/getPublishedFinishedTasks?username={username}`
     + 返回用户发布的已完成的任务列表
     ```json
-    [
-        {
-            "title": "问卷调查",
-            "introduction": "",
-            "starttime": "2019-05-01 00:00:00",
-            "endtime": "2019-05-02 00:00:00",
-            "score": 3.5,
-            "money": 0.5
-        },
-        {
-            "title": "取快递",
-            "introduction": "",
-            "starttime": "2019-05-02 00:00:00",
-            "endtime": "2019-05-03 00:00:00",
-            "score": 4.0,
-            "money": 10.0
-        }
-        
-    ]
+    {
+        "code": 200,
+        "msg": "success",
+        "data": [
+            {   
+                "taskId": 1,
+                "title": "问卷调查",
+                "introduction": "",
+                "starttime": "2019-05-01 00:00:00",
+                "endtime": "2019-05-02 00:00:00",
+                "score": 3.5,
+                "money": 0.1
+            },
+            {   
+                "taskId": 2,
+                "title": "取快递",
+                "introduction": "",
+                "starttime": "2019-05-02 00:00:00",
+                "endtime": "2019-05-03 00:00:00",
+                "score": 4.0,
+                "money": 12.0
+            }
+        ]  
+    }
     ```
 ## 获取用户发布的等待接受的任务
 + GET: `/api/user/getPublishedWaitedTasks?username={username}`
     + 返回用户发布的已完成的任务列表
     ```json
-    [
-        {   
-            "taskId": 1,
-            "title": "问卷调查",
-            "introduction": "",
-            "starttime": "2019-05-01 00:00:00",
-            "endtime": "2019-05-02 00:00:00",
-            "score": 3.5,
-            "money": 0.1
-        },
-        {   
-            "taskId": 2,
-            "title": "取快递",
-            "introduction": "",
-            "starttime": "2019-05-02 00:00:00",
-            "endtime": "2019-05-03 00:00:00",
-            "score": 4.0,
-            "money": 12.0
-        }
-        
-    ]
+    {
+        "code": 200,
+        "msg": "success",
+        "data": [
+            {   
+                "taskId": 1,
+                "title": "问卷调查",
+                "introduction": "",
+                "starttime": "2019-05-01 00:00:00",
+                "endtime": "2019-05-02 00:00:00",
+                "score": 3.5,
+                "money": 0.1
+            },
+            {   
+                "taskId": 2,
+                "title": "取快递",
+                "introduction": "",
+                "starttime": "2019-05-02 00:00:00",
+                "endtime": "2019-05-03 00:00:00",
+                "score": 4.0,
+                "money": 12.0
+            }
+        ]  
+    }
     ```
+## 任务发布者给完成此任务的接收者评分
 
++ `setRate(taskId, value)`: 服务端通过cookie判断用户是否为`taskId`对应的任务的发布者，若是，则将发布者对完成此任务的接受者的评分设为`value`
+
++ POST: `/api/user/setRate`
+  
+    + Content-Type:  application/json
+    + 上传数据格式
+    ```json
+    {
+        "taskId": 1,
+        "value": 3.5
+    }
+    ```
+    + 返回信息
+      + 200 更新评分，返回新的评分值
+      ```json
+      {
+          "code": 200,
+          "msg": "success",
+          "data": 3.5
+      }
+      ```
+      + 401 无权限，返回原评分值
+      ```json
+      {
+          "code": 401,
+          "msg": "failed",
+          "data": 2.5
+      }
+      ```
+       + 400 未找到任务
+      ```json
+      {
+          "code": 400,
+          "msg": "failed",
+          "data": null
+      }
+      ```
 ## 获取组织信息
 
 + GET: `/api/user/getorg?username={username}`
@@ -372,7 +423,7 @@
     + 提交数据格式
     ```json
     {
-            "username": "hyx",
+        "username": "hyx",
         "money": 1632
     }
     ```
