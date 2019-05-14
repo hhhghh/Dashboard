@@ -62,6 +62,7 @@ user {
     username 	char20 		primay key,
     password 	hash256 	not null,
     score		int, 		# 评分
+    task_complete int, 		# 接受任务的数量
     money 		float, 		# 机构
     
     # 基本信息，实名制的要求
@@ -112,22 +113,23 @@ team {
 
 ```mysql
 task {
-	task_id		int			primary key,
-	title		string,
-	intro		string,
-	money		float,
-	number		int,		# 接受任务人的数量，待考量，会造成依赖和不一致的情况
-	publisher	string,		foreign key,
+	task_id				int			primary key,
+	title				string,
+	intro				string,
+	money				float,
+	number				int,		# 接受任务人的数量，待考量，会造成依赖和不一致的情况
+	publisher			string,		foreign key,
 							# 存发布者的用户名，外键
-	state		string		# 任务状态，完成，进行……（任务发布者决定任务完成情况）
-	score		int, 		# 接任务评分要求
+	state				string		# 任务状态，完成，进行……（任务发布者决定任务完成情况）
+	score				int, 		# 接任务评分要求
 	
-	type		int,		# 调查？取快递？按编号表来排
+	type				int,		# 调查？取快递？按编号表来排
 	# 问卷调查 --- 0
-	endtime		time,		# 结束时间
-	starttime	time, 		# 问卷开始时间
+	endtime				time,		# 结束时间
+	starttime			time, 		# 问卷开始时间
+	questionnaire_path	string, 	# 问卷路径
 	# 取快递   --- 1
-	content		string,		# 任务描述（快递密码，具体位置，联系方式）
+	content				string,		# 任务描述（快递密码，具体位置，联系方式）
 }
 ```
 
@@ -153,6 +155,7 @@ tr {	# stand for task reciver
 	username	string		foreign key,
 	task_id		int			foreign key,
 	state		int			# 任务状态，完成，进行……（表示当前接受者完成情况）
+	score		int			# 任务评分
 }
 ```
 
