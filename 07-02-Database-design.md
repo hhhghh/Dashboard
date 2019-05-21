@@ -118,9 +118,9 @@ task {
 	intro				string,
 	money				float,
 	number				int,		# 接受任务人的数量，待考量，会造成依赖和不一致的情况
-	publisher			string,		foreign key,
-							# 存发布者的用户名，外键
-	state				string		# 任务状态，完成，进行……（任务发布者决定任务完成情况）
+	publisher			string		foreign key,
+									# 存发布者的用户名，外键
+	state				string，		# 任务状态，完成，进行……（任务发布者决定任务完成情况）
 	score				int, 		# 接任务评分要求
 	
 	type				int,		# 调查？取快递？按编号表来排
@@ -150,12 +150,11 @@ members {
 
 ```mysql
 tr {	# stand for task reciver
-	# tr_id		# 是否需要一个 id 来标识，待考虑
-	
-	username	string		foreign key,
-	task_id		int			foreign key,
-	state		int			# 任务状态，完成，进行……（表示当前接受者完成情况）
-	score		int			# 任务评分
+	username			string		foreign key,
+	task_id				int			foreign key,
+	state				int			# 任务状态，完成，进行……（表示当前接受者完成情况）
+	score				int			# 任务评分
+	questionnaire_path  string		# 填完的问卷路径
 }
 ```
 
@@ -172,7 +171,7 @@ pit { # 决定机构可以向那些小组发送任务 Permission institution to 
 ```mysql
 piu { # 决定机构不可以向用户发送任务 Permission institution to user
 	ins_name	string 		foreign key,
-	username	string 		foreign key,
+	username	string 		foreign key
 }
 ```
 
