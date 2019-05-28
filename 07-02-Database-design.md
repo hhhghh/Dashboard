@@ -194,3 +194,17 @@ teamlabel { # 小组标签 Labels for teams
 	label		string 		
 }
 ```
+
+### 提示信息
+
+```mysql
+toast { # 提示信息
+	username		string,
+    type			int,
+	message			string,
+	msg_user		string,
+	msg_team_id 	int,
+	msg_task_id		int	
+}
+```
+
