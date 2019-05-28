@@ -117,7 +117,7 @@ task {
 	title				string,
 	intro				string,
 	money				float,
-	number				int,		# 接受任务人的数量，待考量，会造成依赖和不一致的情况
+	max_accepter_number	int,		# 接受任务人的数量
 	publisher			string		foreign key,
 									# 存发布者的用户名，外键
 	state				string，		# 任务状态，完成，进行……（任务发布者决定任务完成情况）
