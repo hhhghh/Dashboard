@@ -22,7 +22,7 @@
   - 8.1 [代码规范 ](https://hhhghh.github.io/Dashboard/08-01-coding-standard)
   - 8.2 [REST API 设计规范 ](https://hhhghh.github.io/Dashboard/08-02-RESTful-api-design-standard)
   - 8.3 [架构设计、详细设计（BCE方法）到应用程序框架映射指南 ](https://hhhghh.github.io/Dashboard/08-03-relationship-between-ECB-framework-directory-design-logic-archit)
-  - 8.4 部署说明
+  - 8.4 [部署说明](https://hhhghh.github.io/Dashboard/08-04-deployment-doc)
 - 9、成品展示
   - 9.1 XX短视频
   - 9.2 XX短视频
