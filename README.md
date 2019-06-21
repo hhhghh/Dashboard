@@ -27,7 +27,7 @@
   - 9.1 XX短视频
   - 9.2 XX短视频
 - X1 meeting-records
-  - [inception meeting (2019/3/19)](https://hhhghh.github.io/Dashboard/inception-meeting)
+  - [Inception meeting (2019/3/19)](https://hhhghh.github.io/Dashboard/Inception-meeting)
   - [Iteration 1 meeting (2019/3/26)](https://hhhghh.github.io/Dashboard/Iteration-1-meeting)
   - [Iteration 2 meeting (2019/4/16)](https://hhhghh.github.io/Dashboard/Iteration-2-meeting)
   - [Iteration 3 meeting (2019/5/21)](https://hhhghh.github.io/Dashboard/Iteration-3-meeting)
