@@ -65,21 +65,21 @@ user {
     # 基本要求
     username 		char(20)	primay key,
     password 		Text		not null,
-    score			int			not null, 		# 评分
-    task_complete 	int, 						# 接受任务的数量
-    money 			float		not null, 		# 金钱数量
+    score		int		not null, 		# 评分
+    task_complete 	int, 					# 接受任务的数量
+    money 		float		not null, 		# 金钱数量
     
     # 基本信息，实名制的要求
     true_name		char(20) 	not null,		# 真实姓名
     school_name 	char(45)	not null, 		# 学校名
-    grade 			int			not null, 		# 年级
+    grade 		int		not null, 		# 年级
     
     # 可选的内容，都是 nullable 的
-    avatar 			char(255),	# 头像
+    avatar 		char(255),	# 头像
     nickname		char(20),	# 昵称
-    wechat 			char(21),	# 微信号
+    wechat 		char(21),	# 微信号
     phonenumber 	char(14),	# 联系电话
-    QQ 				char(14),	# QQ号
+    QQ 			char(14),	# QQ号
     
     # flags
     account_state	int,		# 个人用户-0/机构用户-1
@@ -91,15 +91,15 @@ user {
 ```mysql
 team {
 	# 基本要求
-	team_id		int			primary key, # 小组ID
+	team_id		int		primary key,     # 小组ID
 	team_name	char(45)	not null,	 # 小组名
 	leader		char(20)	not null, 	 # 组长
 	
 	# 可选内容
 	logo		char(255),	# 小组头像
 	description	char(100),	# 小组描述
-	limit       int,   		# 小组权限 直接进组-0/需要组长审核-1/禁止加入-2
-    type		int,        # 小组类型 普通小组-0/默认小组-1
+	limit       	int,   		# 小组权限 直接进组-0/需要组长审核-1/禁止加入-2
+    	type		int,       	# 小组类型 普通小组-0/默认小组-1
 }
 ```
 
@@ -107,21 +107,21 @@ team {
 
 ```mysql
 task {
-	task_id				int			primary key,	# 任务ID
-	title				char(45),	# 任务名
+	task_id			int		primary key,	# 任务ID
+	title			char(45),	# 任务名
 	introduction		char(255),	# 任务介绍
-	money				float,		# 任务金额
-	score				int, 		# 接任务评分要求
+	money			float,		# 任务金额
+	score			int, 		# 接任务评分要求
 	max_accepter_number	int,		# 接受任务人的数量
-	publisher			char(20)	foreign key,	# 存发布者的用户名，外键
-	state				int，		# 任务状态，完成，进行，等待确认，结束
-	type				int,		# 问卷调查-0/跑腿-1
+	publisher		char(20)	foreign key,	# 存发布者的用户名，外键
+	state			int,		# 任务状态，完成，进行，等待确认，结束
+	type			int,		# 问卷调查-0/跑腿-1
 	# 问卷调查 --- 0
-	starttime			time, 		# 问卷开始时间
-	endtime				time,		# 结束时间
+	starttime		time, 		# 问卷开始时间
+	endtime			time,		# 结束时间
 	questionnaire_path	string, 	# 问卷路径
 	# 跑腿   --- 1
-	content				string,		# 任务详细描述
+	content			string,		# 任务详细描述
 }
 ```
 
@@ -129,8 +129,8 @@ task {
 
 ```mysql
 members {
-	id			int			primary key,	# member ID
-	team_id		int			foreign key,	# 小组ID，外键
+	id		int		primary key,	# member ID
+	team_id		int		foreign key,	# 小组ID，外键
 	username	string 		foreign key,	# 成员名，外键
 	
 }
@@ -139,13 +139,13 @@ members {
 ### 任务接收
 
 ```mysql
-tr {					# task reciver
-	id					int			primary key,	# tr ID
+tr {	# task reciver
+	id				int		primary key,	# tr ID
 	username			char(20)	foreign key,	# 任务接受人，外键
-	task_id				int			foreign key,	# 任务ID，外键
-	state				int			# 任务状态，完成，进行……
-	score				int			# 任务评分
-	questionnaire_path  CHAR(128)	# 填完的问卷路径
+	task_id				int		foreign key,	# 任务ID，外键
+	state				int		# 任务状态，完成，进行……
+	score				int		# 任务评分
+	questionnaire_path  		CHAR(128)	# 填完的问卷路径
 }
 ```
 
@@ -153,14 +153,14 @@ tr {					# task reciver
 
 ```mysql
 pit { # 决定机构可以向那些小组发送任务 Permission institution to team
-	id			int			primary key,	# pit ID
+	id		int		primary key,	# pit ID
 	ins_name	string 		foreign key,	# 机构名，外键
-	team_id		int			foreign key,	# 小组ID，外键
+	team_id		int		foreign key,	# 小组ID，外键
 }
 ```
 ```mysql
 piu { # 决定机构不可以向用户发送任务 Permission institution to user
-	id			int			primary key,	# piu ID
+	id		int		primary key,	# piu ID
 	ins_name	string 		foreign key,	# 机构名，外键
 	username	string 		foreign key,	# 用户名，外键
 }
@@ -170,10 +170,10 @@ piu { # 决定机构不可以向用户发送任务 Permission institution to use
 
 ```mysql
 teamtask { # 小组包含的任务
-	id			int			primary key,	# teamtask ID
+	id		int		primary key,	# teamtask ID
 	task_id		int  		foreign key,	# 任务ID，外键
-	team_id		int			foreign key,	# 小组ID，外键
-	isolate 	bool						# 是否屏蔽
+	team_id		int		foreign key,	# 小组ID，外键
+	isolate 	bool				# 是否屏蔽
 }
 ```
 
@@ -182,9 +182,9 @@ teamtask { # 小组包含的任务
 
 ```mysql
 teamlabel { # 小组标签 Labels for teams
-	id			int			primary key,	# teamlabel ID
-	team_id		int			foreign key,	# 小组ID，外键
-	label		char(45),					# 小组标签 		
+	id		int		primary key,	# teamlabel ID
+	team_id		int		foreign key,	# 小组ID，外键
+	label		char(45),			# 小组标签 		
 }
 ```
 
@@ -192,14 +192,14 @@ teamlabel { # 小组标签 Labels for teams
 
 ```mysql
 toast { # 提示信息
-	id				int			primary key,	# toast ID
-	username		char(25),	# 用户名，外键
-    type			int,		# 提示信息类型
-	message			char(255),	# 提示信息
+	id		int		primary key,	# toast ID
+	username	char(25),	# 用户名，外键
+   	 type		int,		# 提示信息类型
+	message		char(255),	# 提示信息
 	msg_username	char(20),	# 提示信息中包含的用户名
 	msg_team_id 	int,		# 提示信息中包含的小组ID
 	msg_team_name	char(45),	# 提示信息中包含的小组名
-	msg_task_id		int,		# 提示信息中包含的任务ID
+	msg_task_id	int,		# 提示信息中包含的任务ID
 	msg_task_title  char(45),	# 提示信息中包含的任务名
 }
 ```
@@ -207,8 +207,8 @@ toast { # 提示信息
 ### 机构成员
 ```mysql
 organization { # 机构成员
-	id				int			primary key,	# organization ID
-	ins_name		char(25),	# 机构名，外键
-	username		char(25),	# 用户名，外键
+	id		int		primary key,	# organization ID
+	ins_name	char(25),	# 机构名，外键
+	username	char(25),	# 用户名，外键
 }
 ```
