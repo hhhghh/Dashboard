@@ -28,3 +28,6 @@
 
 ## 放弃任务
 ![](./image/ssd/Sequence_taskQuit.png)
+
+## 取消任务
+![](./image/ssd/Sequence_taskCancel.png)
