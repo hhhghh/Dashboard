@@ -15,7 +15,7 @@
 - 7、Design（设计说明书）
   - 7.1 [UI design（界面设计）](https://hhhghh.github.io/Dashboard/07-01-UI-design-prototype)
   - 7.2 [Database design（数据库设计）](https://hhhghh.github.io/Dashboard/07-02-Database-design)
-  - 7.3 [Interface API design（接口 API 设计）](https://hhhghh.github.io/API-document/public/index.html)
+  - 7.3 [Interface API design（接口 API 设计）](https://hhhghh.github.io/API-document/public)
   - 7.4 Architecture design（架构设计）
   - 7.5 Usecase design（用例设计）
 - 8、生产规范与指南
@@ -26,8 +26,11 @@
 - 9、成品展示
   - 9.1 XX短视频
   - 9.2 XX短视频
-- [X1 meeting-records ](https://hhhghh.github.io/Dashboard/X1-inception-meeting)
-  - inception meeting (yy/mm/dd)
+- X1 meeting-records
+  - [inception meeting (2019/3/19)](https://hhhghh.github.io/Dashboard/inception-meeting)
+  - [Iteration 1 meeting (2019/3/26)](https://hhhghh.github.io/Dashboard/Iteration-1-meeting)
+  - [Iteration 2 meeting (2019/4/16)](https://hhhghh.github.io/Dashboard/Iteration-2-meeting)
+  - [Iteration 3 meeting (2019/5/21)](https://hhhghh.github.io/Dashboard/Iteration-3-meeting)
 - X2 KANBAN
 - X3 auditing-records
 - X4 Tech/Work Report
