@@ -49,7 +49,7 @@
 - 如果筛选之后没有能显示的任务，则应显示找不到相关任务并提示用户修改筛选条件。
 
 活动图：  
-![搜索接受的任务与发布活动图](image/activity_searchAAndRTask.jpg)  
+![搜索接受的任务与发布活动图](./image/activity_searchTask.png)  
 
 
 
@@ -121,6 +121,7 @@
 **交替场景：** 若验证未通过，用户可以重新填写用户名密码进行登录。
 
 **活动图：**
+
 ![](./image/activity_login.png)
 
 

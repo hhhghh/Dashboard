@@ -17,7 +17,7 @@
   - 7.2 [Database design（数据库设计）](https://hhhghh.github.io/Dashboard/07-02-Database-design)
   - 7.3 [Interface API design（接口 API 设计）](https://hhhghh.github.io/API-document/public)
   - 7.4 [Architecture design（架构设计）](https://hhhghh.github.io/Dashboard/07-04-software-architecture)
-  - 7.5 Usecase design（用例设计）
+  - 7.5 [Usecase design（用例设计）](https://hhhghh.github.io/Dashboard/07-05-Usecase-design)
 - 8、生产规范与指南
   - 8.1 [代码规范 ](https://hhhghh.github.io/Dashboard/08-01-coding-standard)
   - 8.2 [REST API 设计规范 ](https://hhhghh.github.io/Dashboard/08-02-RESTful-api-design-standard)
