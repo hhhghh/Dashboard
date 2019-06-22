@@ -11,7 +11,7 @@
   - 6.3 [Domian Models（领域模型）](https://hhhghh.github.io/Dashboard/06-03-domian_model)
   - 6.4 [State Models（状态模型）](https://hhhghh.github.io/Dashboard/06-04-state_model)
   - 6.5 [System Sequence Diagrams（功能模型）](https://hhhghh.github.io/Dashboard/06-05-system-sequence-diagrams)
-  - 6.6 [Supplementary Requirements（补充需求）](https://github.com/hhhghh/Dashboard/blob/master/06-06-supplementary-requirements.md)
+  - 6.6 [Supplementary Requirements（补充需求）](https://hhhghh.github.io/Dashboard/06-06-supplementary-requirements.md)
 - 7、Design（设计说明书）
   - 7.1 [UI design（界面设计）](https://hhhghh.github.io/Dashboard/07-01-UI-design-prototype)
   - 7.2 [Database design（数据库设计）](https://hhhghh.github.io/Dashboard/07-02-Database-design)
