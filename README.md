@@ -9,14 +9,14 @@
   - 6.1 [Usecase Diagram and UML Activity Diagram（用例图，业务过程/多泳道图）](https://hhhghh.github.io/Dashboard/06-01-usecase-diagram)
   - 6.2 [Use Cases（用例+活动图）](https://hhhghh.github.io/Dashboard/06-02-use-cases)
   - 6.3 [Domian Models（领域模型）](https://hhhghh.github.io/Dashboard/06-03-domian_model)
-  - 6.4 State Models（状态模型）
-  - 6.5 System Sequence Diagrams（功能模型）
+  - 6.4 [State Models（状态模型）](https://hhhghh.github.io/Dashboard/06-04-state_model)
+  - 6.5 [System Sequence Diagrams（功能模型）](https://hhhghh.github.io/Dashboard/06-05-system-sequence-diagrams)
   - 6.6 Supplementary Requirements（补充需求）
 - 7、Design（设计说明书）
   - 7.1 [UI design（界面设计）](https://hhhghh.github.io/Dashboard/07-01-UI-design-prototype)
   - 7.2 [Database design（数据库设计）](https://hhhghh.github.io/Dashboard/07-02-Database-design)
   - 7.3 [Interface API design（接口 API 设计）](https://hhhghh.github.io/API-document/public)
-  - 7.4 Architecture design（架构设计）
+  - 7.4 [Architecture design（架构设计）](https://hhhghh.github.io/Dashboard/07-04-software-architecture)
   - 7.5 Usecase design（用例设计）
 - 8、生产规范与指南
   - 8.1 [代码规范 ](https://hhhghh.github.io/Dashboard/08-01-coding-standard)
