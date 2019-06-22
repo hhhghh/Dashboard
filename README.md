@@ -24,17 +24,16 @@
   - 8.3 [架构设计、详细设计（BCE方法）到应用程序框架映射指南 ](https://hhhghh.github.io/Dashboard/08-03-relationship-between-ECB-framework-directory-design-logic-archit)
   - 8.4 [部署说明](https://hhhghh.github.io/Dashboard/08-04-deployment-doc)
 - 9、成品展示
-  - 9.1 XX短视频
-  - 9.2 XX短视频
+  - 短视频
 - [X1 meeting-records](https://hhhghh.github.io/Dashboard/X1-inception-meeting)
   - [Inception meeting (2019/3/19)](https://hhhghh.github.io/Dashboard/Inception-meeting)
   - [Iteration 1 meeting (2019/3/26)](https://hhhghh.github.io/Dashboard/Iteration-1-meeting)
   - [Iteration 2 meeting (2019/4/16)](https://hhhghh.github.io/Dashboard/Iteration-2-meeting)
   - [Iteration 3 meeting (2019/5/21)](https://hhhghh.github.io/Dashboard/Iteration-3-meeting)
 - [X2 KANBAN](https://github.com/hhhghh/Dashboard/projects?query=is%3Aclosed)
-- X3 auditing-records
+- [X3 auditing-records](https://hhhghh.github.io/Dashboard/X3-auditing-records)
 - X4 Tech/Work Report
   - 学号-title
 - X5 Final Report
   - [16340069-hhyx](https://hhhghh.github.io/Dashboard/16340069-hhyx)
-  - 小组分工与贡献率说明
+  - [小组分工与贡献率说明](https://hhhghh.github.io/Dashboard/小组分工与贡献率说明)
