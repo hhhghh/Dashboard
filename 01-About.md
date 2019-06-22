@@ -13,7 +13,7 @@
 ---
 
 # 2、重要分析设计文档
-+ Requirement specification（需求规格说明书
++ Requirement specification（需求规格说明书）
   + [Usecase Diagram and UML Activity Diagram（用例图，业务过程/多泳道图）](https://hhhghh.github.io/Dashboard/06-01-usecase-diagram)            
   + [Use Cases（用例+活动图）](https://hhhghh.github.io/Dashboard/06-02-use-cases)       
   + [Domian Models（领域模型）](https://hhhghh.github.io/Dashboard/06-03-domian_model)
