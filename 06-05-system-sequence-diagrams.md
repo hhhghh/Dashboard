@@ -37,19 +37,19 @@
 ## 任务
 
 ### 任务搜索
-![](./image/ssd/Sequence_taskSearch.png)
+![](./image/ssd/Sequence_taskSearch.PNG)
 
 ### 接受任务
-![](./image/ssd/Sequence_taskAccept.png)
+![](./image/ssd/Sequence_taskAccept.PNG)
 
 ### 发布任务
-![](./image/ssd/Sequence_taskRelease.png)
+![](./image/ssd/Sequence_taskRelease.PNG)
 
 ### 完成与核实任务
-![](./image/ssd/Sequence_taskConfirm.png)
+![](./image/ssd/Sequence_taskConfirm.PNG)
 
 ### 放弃任务
-![](./image/ssd/Sequence_taskQuit.png)
+![](./image/ssd/Sequence_taskQuit.PNG)
 
 ### 取消任务
-![](./image/ssd/Sequence_taskCancel.png)
+![](./image/ssd/Sequence_taskCancel.PNG)
