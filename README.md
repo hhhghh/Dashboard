@@ -32,7 +32,7 @@
   - [Iteration 2 meeting (2019/4/16)](https://hhhghh.github.io/Dashboard/Iteration-2-meeting)
   - [Iteration 3 meeting (2019/5/21)](https://hhhghh.github.io/Dashboard/Iteration-3-meeting)
 - [X2 KANBAN](https://github.com/hhhghh/Dashboard/projects?query=is%3Aclosed)
-- X3 auditing-records
+- [X3 auditing-records](https://hhhghh.github.io/Dashboard/X3-auditing-records)
 - X4 Tech/Work Report
   - 学号-title
 - X5 Final Report
