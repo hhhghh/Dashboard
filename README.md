@@ -38,6 +38,7 @@
   - [16340063-Sequelize 框架说明及使用](https://gongzq5.github.io/posts/Use-sequelize-ORM-in-Nodejs-2019-06-23/)
   - [16340072-VUE-学习](https://blog.csdn.net/Howlyao/article/details/93374044)
   - [16340071-Vue+axios+promise开发过程中遇到的坑](https://blog.csdn.net/he__changxing/article/details/93394671)
+  - [16340081-koa-session2源码分析与使用方法](https://huang-junjie.github.io/2019/05/28/koa-session2%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/)
 - X5 Final Report
   - [16340069-hhyx](https://hhhghh.github.io/Dashboard/16340069-hhyx)
   - [16340070-hzh0](https://hhhghh.github.io/Dashboard/16340070-hzh0-final-report)
