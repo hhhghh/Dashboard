@@ -33,7 +33,7 @@
 - [X2 KANBAN](https://github.com/hhhghh/Dashboard/projects?query=is%3Aclosed)
 - [X3 auditing-records](https://hhhghh.github.io/Dashboard/X3-auditing-records)
 - X4 Tech/Work Report
-  - 学号-title
+  - [16340070-hzh0-tech-report](https://hhhghh.github.io/Dashboard/16340070-hzh0-tech-report)
 - X5 Final Report
   - [16340069-hhyx](https://hhhghh.github.io/Dashboard/16340069-hhyx)
   - [小组分工与贡献率说明](https://hhhghh.github.io/Dashboard/小组分工与贡献率说明)

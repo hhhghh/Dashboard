@@ -3,7 +3,6 @@
 ### 需求审计
 
 
-
 | 学号 | github-id | 标题 | issue url |
 | ---- | --------- | ---- | --------- |
 |16340070|hzh0|商家认证|https://github.com/uml163/UML/issues/2|
