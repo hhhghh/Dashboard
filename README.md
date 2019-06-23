@@ -17,15 +17,14 @@
   - 7.2 [Database design（数据库设计）](https://hhhghh.github.io/Dashboard/07-02-Database-design)
   - 7.3 [Interface API design（接口 API 设计）](https://hhhghh.github.io/API-document/public)
   - 7.4 [Architecture design（架构设计）](https://hhhghh.github.io/Dashboard/07-04-software-architecture)
-  - 7.5 Usecase design（用例设计）
+  - 7.5 [Usecase design（用例设计）](https://hhhghh.github.io/Dashboard/07-05-Usecase-design)
 - 8、生产规范与指南
   - 8.1 [代码规范 ](https://hhhghh.github.io/Dashboard/08-01-coding-standard)
   - 8.2 [REST API 设计规范 ](https://hhhghh.github.io/Dashboard/08-02-RESTful-api-design-standard)
   - 8.3 [架构设计、详细设计（BCE方法）到应用程序框架映射指南 ](https://hhhghh.github.io/Dashboard/08-03-relationship-between-ECB-framework-directory-design-logic-archit)
   - 8.4 [部署说明](https://hhhghh.github.io/Dashboard/08-04-deployment-doc)
 - 9、成品展示
-  - 9.1 XX短视频
-  - 9.2 XX短视频
+  - 短视频
 - [X1 meeting-records](https://hhhghh.github.io/Dashboard/X1-inception-meeting)
   - [Inception meeting (2019/3/19)](https://hhhghh.github.io/Dashboard/Inception-meeting)
   - [Iteration 1 meeting (2019/3/26)](https://hhhghh.github.io/Dashboard/Iteration-1-meeting)
@@ -37,4 +36,4 @@
   - 学号-title
 - X5 Final Report
   - [16340069-hhyx](https://hhhghh.github.io/Dashboard/16340069-hhyx)
-  - 小组分工与贡献率说明
+  - [小组分工与贡献率说明](https://hhhghh.github.io/Dashboard/小组分工与贡献率说明)
