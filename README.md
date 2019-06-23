@@ -42,6 +42,6 @@
   - [16340069-hhyx](https://hhhghh.github.io/Dashboard/16340069-hhyx)
   - [16340070-hzh0](https://hhhghh.github.io/Dashboard/16340070-hzh0-final-report)
   - [16340072-howlyao](https://hhhghh.github.io/Dashboard/16340072-howlyao-final-report)
-  - [16340071-HeChX](https://hhhghh.github.io/Dashboard/16340071-HeChX-final-report)
+  - [16340071-HeChX](https://hhhghh.github.io/Dashboard/16340071-HeChX)
   - [小组分工与贡献率说明](https://hhhghh.github.io/Dashboard/小组分工与贡献率说明)
 
