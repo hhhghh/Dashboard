@@ -24,6 +24,7 @@
   - 8.3 [架构设计、详细设计（BCE方法）到应用程序框架映射指南 ](https://hhhghh.github.io/Dashboard/08-03-relationship-between-ECB-framework-directory-design-logic-archit)
   - 8.4 [部署说明](https://hhhghh.github.io/Dashboard/08-04-deployment-doc)
 - 9、成品展示
+  
   - 短视频
 - [X1 meeting-records](https://hhhghh.github.io/Dashboard/X1-inception-meeting)
   - [Inception meeting (2019/3/19)](https://hhhghh.github.io/Dashboard/Inception-meeting)
@@ -34,6 +35,8 @@
 - [X3 auditing-records](https://hhhghh.github.io/Dashboard/X3-auditing-records)
 - X4 Tech/Work Report
   - [16340069-Sequelize 使用](https://blog.csdn.net/qq_36159989/article/details/93380959)
+  - [16340070-hzh0-tech-report](https://hhhghh.github.io/Dashboard/16340070-hzh0-tech-report)
 - X5 Final Report
   - [16340069-hhyx](https://hhhghh.github.io/Dashboard/16340069-hhyx)
+  - [16340070-hzh0](https://hhhghh.github.io/Dashboard/16340070-hzh0-final-report)
   - [小组分工与贡献率说明](https://hhhghh.github.io/Dashboard/小组分工与贡献率说明)
