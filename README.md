@@ -24,6 +24,7 @@
   - 8.3 [架构设计、详细设计（BCE方法）到应用程序框架映射指南 ](https://hhhghh.github.io/Dashboard/08-03-relationship-between-ECB-framework-directory-design-logic-archit)
   - 8.4 [部署说明](https://hhhghh.github.io/Dashboard/08-04-deployment-doc)
 - 9、成品展示
+  
   - 短视频
 - [X1 meeting-records](https://hhhghh.github.io/Dashboard/X1-inception-meeting)
   - [Inception meeting (2019/3/19)](https://hhhghh.github.io/Dashboard/Inception-meeting)
@@ -36,9 +37,14 @@
   - [16340069-Sequelize 使用](https://blog.csdn.net/qq_36159989/article/details/93380959)
   - [16340070-hzh0-tech-report](https://hhhghh.github.io/Dashboard/16340070-hzh0-tech-report)
   - [16340063-Sequelize 框架说明及使用](https://gongzq5.github.io/posts/Use-sequelize-ORM-in-Nodejs-2019-06-23/)
+  - [16340072-VUE-学习](https://blog.csdn.net/Howlyao/article/details/93374044)
+  - [16340071-Vue+axios+promise开发过程中遇到的坑](https://blog.csdn.net/he__changxing/article/details/93394671)
+  - [16340081-koa-session2源码分析与使用方法](https://huang-junjie.github.io/2019/05/28/koa-session2%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/)
 - X5 Final Report
   - [16340069-hhyx](https://hhhghh.github.io/Dashboard/16340069-hhyx)
   - [16340070-hzh0](https://hhhghh.github.io/Dashboard/16340070-hzh0-final-report)
   - [16340063-gongzq5](https://hhhghh.github.io/Dashboard/16340070-hzh0-final-report)
-  - [小组分工与贡献率说明](https://hhhghh.github.io/Dashboard/小组分工与贡献率说明)
+  - [16340072-howlyao](https://hhhghh.github.io/Dashboard/16340072-howlyao-final-report)
+  - [16340071-HeChX](https://hhhghh.github.io/Dashboard/16340071-HeChX)
+- [小组分工与贡献率说明](https://hhhghh.github.io/Dashboard/小组分工与贡献率说明)
 
