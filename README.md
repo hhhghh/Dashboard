@@ -24,7 +24,6 @@
   - 8.3 [架构设计、详细设计（BCE方法）到应用程序框架映射指南 ](https://hhhghh.github.io/Dashboard/08-03-relationship-between-ECB-framework-directory-design-logic-archit)
   - 8.4 [部署说明](https://hhhghh.github.io/Dashboard/08-04-deployment-doc)
 - 9、成品展示
-  
   - 短视频
 - [X1 meeting-records](https://hhhghh.github.io/Dashboard/X1-inception-meeting)
   - [Inception meeting (2019/3/19)](https://hhhghh.github.io/Dashboard/Inception-meeting)
