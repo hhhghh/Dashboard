@@ -36,4 +36,5 @@
   - [16340070-hzh0-tech-report](https://hhhghh.github.io/Dashboard/16340070-hzh0-tech-report)
 - X5 Final Report
   - [16340069-hhyx](https://hhhghh.github.io/Dashboard/16340069-hhyx)
+  - [16340070-hzh0](https://hhhghh.github.io/Dashboard/16340070-hzh0-final-report)
   - [小组分工与贡献率说明](https://hhhghh.github.io/Dashboard/小组分工与贡献率说明)
