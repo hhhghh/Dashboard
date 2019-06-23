@@ -35,6 +35,7 @@
 - X4 Tech/Work Report
   - [16340069-Sequelize 使用](https://blog.csdn.net/qq_36159989/article/details/93380959)
   - [16340070-hzh0-tech-report](https://hhhghh.github.io/Dashboard/16340070-hzh0-tech-report)
+  - [16340063-Sequelize 框架说明及使用](https://gongzq5.github.io/posts/Use-sequelize-ORM-in-Nodejs-2019-06-23/)
 - X5 Final Report
   - [16340069-hhyx](https://hhhghh.github.io/Dashboard/16340069-hhyx)
   - [16340070-hzh0](https://hhhghh.github.io/Dashboard/16340070-hzh0-final-report)
