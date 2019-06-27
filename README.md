@@ -26,6 +26,7 @@
   - 8.3 [架构设计、详细设计（BCE方法）到应用程序框架映射指南 ](https://hhhghh.github.io/Dashboard/08-03-relationship-between-ECB-framework-directory-design-logic-archit)
   - 8.4 [部署说明](https://hhhghh.github.io/Dashboard/08-04-deployment-doc)
 - 9、成品展示
+  
   - [演示视频](https://www.bilibili.com/video/av56623567)
 - [X1 meeting-records](https://hhhghh.github.io/Dashboard/X1-inception-meeting)
   - [Inception meeting (2019/3/19)](https://hhhghh.github.io/Dashboard/Inception-meeting)
@@ -54,11 +55,11 @@
 	- [源代码](https://hhhghh.github.io/Dashboard/源代码)
 	- 软件需求规格说明书
 		- [Usecase Diagram and UML Activity Diagram（用例图，业务过程/多泳道图）](https://hhhghh.github.io/Dashboard/06-01-usecase-diagram)
-  	- [Use Cases（用例+活动图）](https://hhhghh.github.io/Dashboard/06-02-use-cases)
-  	- [Domian Models（领域模型）](https://hhhghh.github.io/Dashboard/06-03-domian_model)
-  	- [State Models（状态模型）](https://hhhghh.github.io/Dashboard/06-04-state_model)
-  	- [System Sequence Diagrams（功能模型）](https://hhhghh.github.io/Dashboard/06-05-system-sequence-diagrams)
-  	- [Supplementary Requirements（补充需求）](https://hhhghh.github.io/Dashboard/06-06-supplementary-requirements)
+		- [Use Cases（用例+活动图）](https://hhhghh.github.io/Dashboard/06-02-use-cases)
+		- [Domian Models（领域模型）](https://hhhghh.github.io/Dashboard/06-03-domian_model)
+		- [State Models（状态模型）](https://hhhghh.github.io/Dashboard/06-04-state_model)
+		- [System Sequence Diagrams（功能模型）](https://hhhghh.github.io/Dashboard/06-05-system-sequence-diagrams)
+		- [Supplementary Requirements（补充需求）](https://hhhghh.github.io/Dashboard/06-06-supplementary-requirements)
   - [软件设计文档](https://hhhghh.github.io/Dashboard/软件设计文档)
   - [小组分工与贡献率说明](https://hhhghh.github.io/Dashboard/小组分工与贡献率说明2)
 
