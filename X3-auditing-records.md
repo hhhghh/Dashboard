@@ -23,7 +23,7 @@
 | 16340069 | hhyx | 用户密码加密 | [https://github.com/sysu-abi/docs/issues/3](https://github.com/sysu-abi/docs/issues/3) |
 | 16340071     |  HeChX      |   数据库问卷问题的存储方式   | [https://github.com/SSASGroup/Dashboard/issues/3](https://github.com/SSASGroup/Dashboard/issues/3) |
 | 16340081 | Huang-Junjie | 用例图有误 | [https://github.com/swsad/Dashboard/issues/3](https://github.com/swsad/Dashboard/issues/3) |
-|      |           |      |           |
+| 16340063 | Gongzq5      | 界面没有体现兴趣组 | [https://github.com/surplus-youyu/Dashboard/issues/16](https://github.com/surplus-youyu/Dashboard/issues/16) |
 |      |           |      |           |
 |      |           |      |           |
 
