@@ -59,6 +59,6 @@
   	- [State Models（状态模型）](https://hhhghh.github.io/Dashboard/06-04-state_model)
   	- [System Sequence Diagrams（功能模型）](https://hhhghh.github.io/Dashboard/06-05-system-sequence-diagrams)
   	- [Supplementary Requirements（补充需求）](https://hhhghh.github.io/Dashboard/06-06-supplementary-requirements)
-  - 软件设计文档
+  - [软件设计文档](https://hhhghh.github.io/Dashboard/软件设计文档)
   - [小组分工与贡献率说明](https://hhhghh.github.io/Dashboard/小组分工与贡献率说明2)
 
