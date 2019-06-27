@@ -1,5 +1,7 @@
 # Sysu Happy-spare-money
 
+![](https://img.shields.io/badge/final-Happy--spare--money-brightgreen.svg)
+
 - 1、[About（项目概况）](https://hhhghh.github.io/Dashboard/01-About)
 - 2、[Team profile（团队组建与分工）](https://hhhghh.github.io/Dashboard/02-Team-profile)
 - 3、[Investigation（项目前期调研/竞品分析）](https://hhhghh.github.io/Dashboard/03-Investigation)
@@ -47,3 +49,16 @@
   - [16340071-HeChX](https://hhhghh.github.io/Dashboard/16340071-HeChX)
   - [16340081-Huang-Junjie](https://hhhghh.github.io/Dashboard/16340081-Huang-Junjie-final-report)
   - [小组分工与贡献率说明](https://hhhghh.github.io/Dashboard/小组分工与贡献率说明)
+- 软件工程综合实验课程
+	- [安装部署说明](https://hhhghh.github.io/Dashboard/08-04-deployment-doc)
+	- [源代码](https://hhhghh.github.io/Dashboard/源代码)
+	- 软件需求规格说明书
+		- [Usecase Diagram and UML Activity Diagram（用例图，业务过程/多泳道图）](https://hhhghh.github.io/Dashboard/06-01-usecase-diagram)
+  	- [Use Cases（用例+活动图）](https://hhhghh.github.io/Dashboard/06-02-use-cases)
+  	- [Domian Models（领域模型）](https://hhhghh.github.io/Dashboard/06-03-domian_model)
+  	- [State Models（状态模型）](https://hhhghh.github.io/Dashboard/06-04-state_model)
+  	- [System Sequence Diagrams（功能模型）](https://hhhghh.github.io/Dashboard/06-05-system-sequence-diagrams)
+  	- [Supplementary Requirements（补充需求）](https://hhhghh.github.io/Dashboard/06-06-supplementary-requirements)
+  - 软件设计文档
+  - [小组分工与贡献率说明](https://hhhghh.github.io/Dashboard/小组分工与贡献率说明2)
+
