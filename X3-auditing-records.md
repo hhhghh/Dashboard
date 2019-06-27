@@ -9,7 +9,7 @@
 | 16340069 | hhyx | 用户认证 | [https://github.com/TeamWeGo/teamwego/issues/2](https://github.com/TeamWeGo/teamwego/issues/2) |
 | 16340071 |  HeChX  |  缺少用例  | [https://github.com/xianyu-team/Dashboard/issues/1](https://github.com/xianyu-team/Dashboard/issues/1) |
 | 16340081 | Huang-Junjie | 任务不能定向发布 | [https://github.com/swsad/Dashboard/issues/2](https://github.com/swsad/Dashboard/issues/2) |
-|      |           |      |           |
+| 16340063 | Gongzq5      | 没有昵称和头像   | [https://github.com/swsad/Dashboard/issues/5](https://github.com/swsad/Dashboard/issues/5) |
 |      |           |      |           |
 |      |           |      |           |
 
