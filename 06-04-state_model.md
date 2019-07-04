@@ -29,16 +29,16 @@ v2 | 2019-06-23 | 小组部分状态模型 | HeChX |
 
 
 ## 创建小组
-![](./image/state_model/State_groupCreate.PNG)
+![](./image/state_model/State_groupCreate.png)
 
 ## 加入小组
-![](./image/state_model/State_groupAddition.PNG)
+![](./image/state_model/State_groupAddition.png)
 
 ## 退出小组
-![](./image/state_model/State_groupWithdraw.PNG)
+![](./image/state_model/State_groupWithdraw.png)
 
 ## 转让小组
-![](./image/state_model/State_groupTransfer.PNG)
+![](./image/state_model/State_groupTransfer.png)
 
 ## 解散小组
-![](./image/state_model/State_groupDissolve.PNG)
+![](./image/state_model/State_groupDissolve.png)
